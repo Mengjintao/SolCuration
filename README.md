@@ -61,8 +61,9 @@ Chemprop
 
 AttentiveFP
 1. `cd /path/to/AttentiveFP`
-2. `bash Collect_RMSE.sh > RMSE.txt`
-3.  We can load data from RMSE.txt using MS Excel for further analysis. 
+2. `cd solubility`
+3. `bash Collect_RMSE.sh > RMSE.txt`
+4.  We can load data from RMSE.txt using MS Excel for further analysis. 
 
 ##### Collect Pearson Correlation Coefficient R^2 and Spearman's Rank-Order Correlation Coefficient R_s on BPU, BDZ, PCA, CDK, BPZ&BDZ series evaluation dataset.  
 Chemprop
@@ -72,8 +73,9 @@ Chemprop
 
 AttentiveFP
 1. `cd /path/to/AttentiveFP`
-2. `bash Collect_Coefficient.sh > R2out.txt`
-3.  We can load data from R2out.txt using MS Excel and plot the figures for further analysis. 
+2. `cd solubility`
+3. `bash Collect_Coefficient.sh > R2out.txt`
+4.  We can load data from R2out.txt using MS Excel and plot the figures for further analysis. 
 
 #### Dependencies  
 
