@@ -54,10 +54,26 @@ Currently, we use szsc partition (2000 computing nodes with 6,400 CPU cores and 
 4. `bash AttentiveFP_GridSearch.sh` 
 
 ##### Collect RMSE and confidence intervals for 7 datasets After Grid Search
-1.  
+######Chemprop
+1. `cd /path/to/Chemprop`
+2. `bash Collect_RMSE.sh > RMSE.txt`
+3.  We can load data from RMSE.txt using MS Excel for further analysis.  
+
+######AttentiveFP
+1. `cd /path/to/AttentiveFP`
+2. `bash Collect_RMSE.sh > RMSE.txt`
+3.  We can load data from RMSE.txt using MS Excel for further analysis. 
 
 ##### Collect Pearson Correlation Coefficient R^2 and Spearman's Rank-Order Correlation Coefficient R_s on BPU, BDZ, PCA, CDK, BPZ&BDZ series evaluation dataset.  
-1. 
+######Chemprop
+1. `cd /path/to/Chemprop`
+2. `bash Collect_Coefficient.sh > R2out.txt`
+3.  We can load data from R2out.txt using MS Excel and plot the figures for further analysis. 
+
+######AttentiveFP
+1. `cd /path/to/AttentiveFP`
+2. `bash Collect_Coefficient.sh > R2out.txt`
+3.  We can load data from R2out.txt using MS Excel and plot the figures for further analysis. 
 
 #### Dependencies  
 
