@@ -1,0 +1,5 @@
+tensorboardX
+sklearn
+matplotlib
+IPython
+seaborn
