@@ -12,11 +12,12 @@ import os
 from rdkit.Chem import Descriptors
 
 moe = pd.read_csv('CHEMBL26-chembl_26_activity.csv',  engine='python')
-moe = moe[['Smiles','Standard Value','Standard Units', 'Assay Description']]
+moe = moe[['Molecule ChEMBL ID','Smiles','Standard Value','Standard Units', 'Assay Description']]
 moe.head()
 
 old_list = []
 smi_list = []
+chid_list = []
 logs_list = []
 dtype_list = []
 
@@ -25,6 +26,7 @@ logs_org = []
 
 for idx, item in moe.iterrows():
     smi = item['Smiles']
+    chid = item['Molecule ChEMBL ID']
     old = smi
     print (idx, smi)
     if smi is np.nan:
@@ -93,11 +95,12 @@ for idx, item in moe.iterrows():
  
     print (logS)
     smi_list.append(smiles)
+    chid_list.append(chid)
     logs_list.append(logS)
     dtype_list.append(desc) 
     old_list.append(old)
 
-df = pd.DataFrame({'smiles':smi_list, 'logS':logs_list, 'description':dtype_list, 'oldsmi':old_list})
+df = pd.DataFrame({'smiles':smi_list, 'ChEMBL ID':chid_list, 'logS':logs_list, 'description':dtype_list, 'oldsmi':old_list})
 df.sort_values(by='smiles')
 
 df.to_csv('chembl_stand.csv', index=False)
