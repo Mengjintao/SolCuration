@@ -92,7 +92,16 @@ for idx, item in moe.iterrows():
         logS = math.log(value/1000.0/1000.0/1000.0, 10) 
     else: 
         continue 
- 
+
+    if "Kinetic" in desc:
+        continue
+
+    if "kinetic" in desc:
+        continue
+
+    if "oil" in desc:
+        continue
+
     print (logS)
     smi_list.append(smiles)
     chid_list.append(chid)
